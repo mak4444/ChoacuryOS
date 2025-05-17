@@ -131,7 +131,7 @@ static void handle_command(int argc, const char** argv) {
 }
 
 /* Parse command buffer to a null-terminated list of arguments */
-static void parse_command(char* command, unsigned length) {
+void parse_command(char* command, unsigned length) {
     /* Make sure that the command buffer is null-terminated */
     command[length] = 0;
 
@@ -397,6 +397,12 @@ void shell_start() {
                 break;
             default: {
                 const char* utf8 = key_to_utf8(&event);
+//    term_write_hex(event.key);
+//    term_putchar(*key_to_utf8(&event), TC_WHITE);
+
+//    term_write_hex(* utf8);
+//    term_putchar(* utf8, TC_WHITE);
+
                 while (utf8 && *utf8) {
                     if (command_length >= sizeof(command_buffer) - 1) {
                         break;

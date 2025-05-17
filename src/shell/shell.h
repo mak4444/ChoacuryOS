@@ -1,6 +1,7 @@
 #pragma once
 
 void shell_start();
+void parse_command(char* command, unsigned length);
 
 #include "../drivers/filesystem/fat.h"
 
