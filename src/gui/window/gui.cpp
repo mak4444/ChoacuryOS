@@ -1,4 +1,4 @@
-#include "GUI.hpp"
+#include "gui.hpp"
 #include "headers/bitmap.hpp"
 #include "headers/rim.hpp"
 #include "../../drivers/utils.h"
