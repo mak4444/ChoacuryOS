@@ -57,6 +57,10 @@ sudo cp build/ChoacuryOS.bin $MOUNT_DIR/boot/
 # copy fonts to /
 sudo cp Unifont.psf $MOUNT_DIR/
 
+sudo cp src/shell/commands/forth/autoexec.4th $MOUNT_DIR/
+
+sudo cp -R src/shell/commands/forth/ForthLib $MOUNT_DIR/
+
 # cleanup
 sudo umount "$MOUNT_DIR"
 sudo losetup -d $LOOP_DEV

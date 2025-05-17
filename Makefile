@@ -53,6 +53,7 @@ SRCS :=								\
 	shell/commands/calc/calc.c      \
 	shell/commands/compdate/compdate.c \
 	shell/commands/echo/echo.c      \
+	shell/commands/forth/forth.c    \
 	shell/commands/pause/pause.c    \
 	shell/commands/pl/pl.c          \
 	shell/commands/chstat/chstat.c  \
@@ -88,7 +89,8 @@ img: kernel
 	./create-disk.sh
 
 run: img
-	qemu-system-x86_64 -hda $(BUILD_DIR)/ChoacuryOS.img -serial stdio -audiodev pa,id=snd0 -machine pcspk-audiodev=snd0
+	qemu-system-x86_64 -hda $(BUILD_DIR)/ChoacuryOS.img -serial stdio -audiodev pa,id=snd0 -machine pcspk-audiodev=snd0 -hdb  fat:rw:../disk_efi
+	echo qemu-system-x86_64 -hda $(BUILD_DIR)/ChoacuryOS.img -serial stdio -audiodev pa,id=snd0 -machine pcspk-audiodev=snd0
 
 clean:
 	rm -rf $(BUILD_DIR)
