@@ -1,4 +1,4 @@
-#include "Bitmap.h"
+#include "bitmap.h"
 #include "../../drivers/vbe.h"
 
 // Mostly from the internet, modified to fit what we use and our naming and stuff.
