@@ -8,6 +8,7 @@
 #include "calc/calc.h"
 #include "compdate/compdate.h"
 #include "echo/echo.h"
+#include "forth/forth.h"
 #include "pause/pause.h"
 #include "pl/pl.h"
 #include "chstat/chstat.h"
