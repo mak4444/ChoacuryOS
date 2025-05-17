@@ -57,6 +57,7 @@ Command shell_commands_list[] = {
     {"compdate", {NULL},        "No args.", "Shows the compilation date.",                                      shell_compdate_command},  
     {"clear",    {"cls", NULL}, "No args.", "Clears the screen.",                                               shell_clear_command},
     {"echo",     {NULL},        "No args.", "Prints string to the console.",                                    shell_echo_command},  
+    {"forth",    {"4th",NULL},  "No args.", "Forth system",                                                     shell_forth_command},
     {"guiload",  {NULL},        "No args.", "Loads up the GUI (WIP!)",                                          shell_guiload_command},
     {"ls",       {NULL},        "(str:directory)", "List files in a directory.",                                shell_ls_command},  
     // {"mkdir",    {NULL},        "(str:directory)", "Creates a empty directory.",                                shell_mkdir_command}, // <-- TODO
